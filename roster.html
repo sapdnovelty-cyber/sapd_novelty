@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPD Official Organizational Roster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial+Narrow:wght@400;700&display=swap');
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            padding: 20px;
+            color: #000;
+        }
+
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 1800px; /* Sangat lebar agar semua kolom muat */
+        }
+
+        /* Card Utama */
+        .person-card {
+            width: 150px;
+            border: 1px solid #000;
+            background: #fff;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 1px 1px 0px #000;
+        }
+
+        .photo-area {
+            width: 100%;
+            height: 140px;
+            background-color: #e5e7eb;
+            border-bottom: 1px solid #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .label-area {
+            padding: 4px;
+            text-align: center;
+            font-size: 10px;
+            min-height: 45px;
+        }
+
+        .label-area b {
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        /* Warna Header (Sesuai Foto LAPD) */
+        .rank-blue { background-color: #003366; color: white; }
+        .rank-green { background-color: #1b4332; color: white; }
+        .rank-red { background-color: #780000; color: white; }
+        .rank-gold { background-color: #c08b00; color: black; }
+        .rank-gray { background-color: #4a5568; color: white; }
+
+        /* Konektor Garis */
+        .line-v { width: 2px; height: 15px; background: #000; }
+        .line-h { height: 2px; background: #000; width: 90%; }
+
+        .division-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .member-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .small-card { width: 110px; }
+        .small-card .photo-area { height: 100px; }
+    </style>
+</head>
+<body>
+
+<div class="org-chart">
+    <div class="text-center mb-6">
+        <div class="flex items-center justify-center gap-10">
+            <img src="img/gambar_2.png" width="100">
+            <div>
+                <h1 class="text-4xl font-bold text-blue-900 italic">SAN ANDREAS POLICE DEPARTMENT</h1>
+                <p class="text-xl font-bold">ORGANIZATIONAL CHART</p>
+                <p class="text-red-700 font-bold">REVISION: APRIL 2026</p>
+            </div>
+            <img src="img/gambar_4.png" width="100" class="opacity-40">
+        </div>
+    </div>
+
+    <div class="person-card scale-110">
+        <div class="photo-area"><img src="img/gambar_3.png" alt="Eugene Park"></div>
+        <div class="label-area rank-blue">
+            <b>President of Commissioner</b>
+            Eugene Park
+        </div>
+    </div>
+    <div class="line-v"></div>
+    <div class="person-card">
+        <div class="photo-area"><img src="img/gambar_5.jpg" alt="Kensington"></div>
+        <div class="label-area rank-blue">
+            <b>Chief of Police</b>
+            Christoper Kensington
+        </div>
+    </div>
+    <div class="line-v"></div>
+    <div class="person-card">
+        <div class="photo-area"><img src="https://via.placeholder.com/150x180?text=ASST+CHIEF" alt="Ashford"></div>
+        <div class="label-area rank-blue">
+            <b>Assistant Chief</b>
+            Marlowe Ashford
+        </div>
+    </div>
+    <div class="line-v"></div>
+    <div class="person-card">
+        <div class="photo-area bg-gray-200 italic text-gray-400">VACANT</div>
+        <div class="label-area rank-gray">
+            <b>Deputy Chief</b>
+            Commander All Division
+        </div>
+    </div>
+
+    <div class="line-v"></div>
+    <div class="line-h"></div>
+
+    <div class="division-container">
+
+        <div class="column">
+            <div class="person-card">
+                <div class="photo-area bg-red-100 italic text-red-300 uppercase">Vacant</div>
+                <div class="label-area rank-red">
+                    <b>Gang Enforcement Detail</b>
+                    Commander
+                </div>
+            </div>
+            <div class="person-card">
+                <div class="photo-area bg-red-50 italic text-red-200 uppercase">Vacant</div>
+                <div class="label-area border-t border-black">
+                    <b>Officer In-Charge</b>
+                    Captain I
+                </div>
+            </div>
+            <div class="person-card">
+                <div class="photo-area bg-gray-300"></div>
+                <div class="label-area bg-red-700 text-white">
+                    <b>Gang Crime Law Unit</b>
+                    Lieutenant I Kyle Ugarte
+                </div>
+            </div>
+            <div class="person-card small-card">
+                <div class="label-area italic bg-gray-100">
+                    <b>Member GCLU</b>
+                    Sergeant I (Vacant)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="person-card">
+                <div class="photo-area bg-amber-100 italic text-amber-400">VACANT</div>
+                <div class="label-area rank-gold">
+                    <b>Internal Affairs Division</b>
+                    Captain III
+                </div>
+            </div>
+            <div class="person-card">
+                <div class="photo-area bg-amber-50 italic text-amber-300">VACANT</div>
+                <div class="label-area border-t border-black">
+                    <b>IAD Member</b>
+                    Captain I
+                </div>
+            </div>
+            <div class="person-card small-card">
+                <div class="label-area italic bg-gray-100">
+                    <b>IAD Member</b>
+                    Sergeant I (Vacant)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="person-card">
+                <div class="photo-area bg-gray-200 italic text-gray-400">VACANT</div>
+                <div class="label-area rank-blue">
+                    <b>Metropolitan & Air Support</b>
+                    Captain II
+                </div>
+            </div>
+            <div class="person-card small-card">
+                <div class="label-area italic bg-gray-100">
+                    <b>Metro Support</b>
+                    Sergeant I (Vacant)
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="person-card">
+                <div class="photo-area bg-green-100"></div>
+                <div class="label-area rank-green">
+                    <b>Recruitment & Employment</b>
+                    Sergeant I Daniel Carter
+                </div>
+            </div>
+            
+            <div class="member-grid">
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-100"></div>
+                    <div class="label-area bg-blue-100"><b>PO III+I</b> Kendrick Harrison</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-100"></div>
+                    <div class="label-area bg-blue-100"><b>PO III</b> Hyacinth Montonegro</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-100"></div>
+                    <div class="label-area bg-blue-100"><b>PO III</b> Gisella Lalatina</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-100"></div>
+                    <div class="label-area bg-blue-100"><b>PO III</b> Fadiel Graves</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-50"></div>
+                    <div class="label-area"><b>PO I</b> Jack Reymor</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-50"></div>
+                    <div class="label-area"><b>PO I</b> Brennan Calhoun</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-50"></div>
+                    <div class="label-area"><b>PO I</b> Jayden Pearce</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-50"></div>
+                    <div class="label-area"><b>PO I</b> Dean Harrison</div>
+                </div>
+                <div class="person-card small-card">
+                    <div class="photo-area bg-gray-50"></div>
+                    <div class="label-area"><b>PO I</b> Joestar Casmero</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-16 w-full px-20 flex justify-between text-[10px] border-t border-gray-400 pt-4 font-bold italic">
+        <p>CONFIDENTIAL DOCUMENT - SAPD INTERNAL USE ONLY</p>
+        <p>SAN ANDREAS GOVERNMENT | TO PROTECT AND TO SERVE</p>
+        <p>PAGE 01 / 01</p>
+    </div>
+</div>
+
+</body>
+</html>
